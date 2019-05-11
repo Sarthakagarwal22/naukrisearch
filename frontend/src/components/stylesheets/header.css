@@ -1,0 +1,16 @@
+.main_header{
+	position:relative;
+	top:0;
+	left:0;
+	height:60px;
+	display: flex;
+	padding: 0 40px ;
+	justify-content: space-between;
+	font-family: Regular;
+	background: var(--blue);
+	align-items:center;
+}
+
+.left_header{
+	color: var(--white);
+}

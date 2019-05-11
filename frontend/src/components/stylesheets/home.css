@@ -1,0 +1,75 @@
+.home-container{
+	min-height: 100vh;
+	font-family: Regular;
+}
+
+.home-hero-banner {
+	background: var(--blue);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 10px;
+	position: relative;
+	z-index: 0;
+}
+
+.home-hero-banner-pattern{
+	background: url("../../local-data/images/banner-background.png") center no-repeat;
+	width:100%;
+	height: 100%;
+	position: absolute;
+    z-index: -1;
+    left: 0;
+    opacity: 0.1;
+}
+
+.home-job-available-container,.home-job-applied-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.home-available-applied-toggle-active{
+	color:var(--coral);
+	border-bottom: 1px solid var(--coral)
+}
+
+.home-available-applied-toggle{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.home-available-applied-toggle div {
+	width: 40%;
+	text-align: center;
+}
+
+.home-available-toggle {
+	padding-right: 20px;
+	border-right: 1px solid var(--light-grey);
+}
+
+.home-available-toggle {
+	padding-left: 20px;
+}
+
+.home-deleted-posts{
+	align-self:flex-end; 
+}
+
+@media screen and (min-width: 768px){
+	.home-hero-banner{
+		padding: 40px;
+	}
+	.home-search-bar{
+		max-width:50%;
+	}
+	.home-hero-banner-pattern{
+		background-size: cover;
+		opacity: 0.03;
+	}
+
+} 

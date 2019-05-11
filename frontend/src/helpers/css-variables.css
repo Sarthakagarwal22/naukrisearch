@@ -1,0 +1,239 @@
+:root {
+  --black: rgb(0,0,0);
+  --dark-grey: rgba(0,0,0,0.8);
+  --grey: rgba(0,0,0,0.5);
+  --light-grey: rgba(0,0,0,0.2);
+  --blue: #6b98b8;
+  --coral: #039073;
+  --green: #00cca2;
+  --light-green: rgba(190,219,193,0.7);
+  --yellow: #ffe7a5;
+  --light-yellow: #fffaf4;
+  --orange: #ff9d00;
+  --brick-red: #ff715b;
+  --light-red: rgba(252,94,94,0.05);
+  --silver:rgb(235,235,235);
+  --white: rgb(255,255,255);
+}
+
+@font-face{
+	font-family: Regular;
+	src: url(./fonts/Regular.otf)
+}
+
+@font-face{
+	font-family: Bold;
+	src: url(./fonts/Bold.otf);
+}
+
+@font-face{
+	font-family: Medium;
+	src: url(./fonts/Medium.otf);
+}
+
+@font-face{
+	font-family: Italics;
+	src: url(./fonts/Italic.otf);
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin:0;
+  font-weight: normal;
+  font-family: Regular;
+}
+
+p{
+  font-size: 15px;
+  font-family: Regular;
+}
+
+span,label{
+  font-family: Regular;
+}
+
+.medium{
+  font-size: 13px;
+  font-family: Regular;
+}
+
+.red{
+	color: red;
+}
+
+.grey{
+  color:var(--grey);
+}
+
+.dark-grey{
+  color:var(--dark-grey);
+}
+
+.coral{
+  color:var(--coral);
+}
+
+.white {
+  color:var(--white);
+}
+
+.silver {
+  color: var(--silver);
+}
+
+.blue{
+  color: var(--blue);
+}
+
+.rounded-corner{
+  border-radius: 4px;
+}
+
+.small{
+  font-family: Regular;
+  font-size: 10px;
+  margin:0;
+}
+
+.padding-small{
+  padding: 5px;
+}
+
+.padding-medium{
+  padding: 10px;
+}
+
+.padding-large{
+  padding: 15px;
+}
+
+.padding-Xlarge{
+  padding: 20px;
+}
+
+.margin-small{
+  margin: 5px;
+}
+
+.margin-medium{
+  margin: 10px;
+}
+
+.margin-large{
+  margin: 15px;
+}
+
+.margin-Xlarge{
+  margin: 20px;
+}
+
+.toast {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+.toast.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+.loader {
+  position: relative;
+  top:10px;
+  left: 5px;
+  display: inline-block;
+  border: 4px solid var(--light-grey);
+  border-radius: 50%;
+  border-top: 4px solid var(--coral);
+  border-left: 4px solid var(--coral);
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-white {
+  border-top: 4px solid var(--white);
+  border-left: 4px solid var(--white);
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+button{
+  padding: 10px;  
+  border-radius: 4px;
+  width: 20vw;
+  font-family: Medium;
+  background: var(--blue);
+  color: white;
+  border:none;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+button:disabled{
+  background: var(--light-grey);
+}
+
+input{
+  padding: 10px;
+  font-size: 15px;
+  font-family: Regular;
+  border:1px solid var(--light-grey);
+  border-radius: 4px;
+  width:90%;
+}
+
+@media screen and (max-width: 768px){
+  .hidden-md-dowm{
+    display: none;
+  }
+}
